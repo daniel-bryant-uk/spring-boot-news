@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan
+@ComponentScan(basePackages = "uk.co.taidev.springbootnews")
 public class Application {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
