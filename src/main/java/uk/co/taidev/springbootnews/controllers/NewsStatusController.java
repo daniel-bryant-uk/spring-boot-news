@@ -14,7 +14,7 @@ public class NewsStatusController {
     }
 
 
-    @RequestMapping("/noNewsInfiniteLoop")
+    @RequestMapping("/noNewsInfiniteWait")
     String noNewsInfiniteLoop() {
         int i = 0;
         while (i == 0) {
