@@ -8,8 +8,20 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 public class NewsStatusController {
 
-    @RequestMapping("/news")
-    String home() {
+    @RequestMapping("/simpleNews")
+    String simpleNews() {
         return "No news is good news!";
+    }
+
+
+    @RequestMapping("/noNewsInfiniteLoop")
+    String noNewsInfiniteLoop() {
+        int i = 0;
+        while (i == 0) {
+            if (i == 1) {
+                return "This endpoint will never return...";
+            }
+        }
+        return "We'll never get here... :)";
     }
 }
